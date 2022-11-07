@@ -1,6 +1,8 @@
 import { createSlice, createAsyncThunk, current } from '@reduxjs/toolkit';
 import axios from 'axios'
 
+const BASE_URL = 'https://mern-todo-list.onrender.com'
+
 const initialState = {
     tasks: [],
     taskName: '',
@@ -11,7 +13,7 @@ const initialState = {
 export const getAllTasks = createAsyncThunk(
     'task/getAllTasks',
     async () => {
-        const res = await axios.get('/api/v1/tasks');
+        const res = await axios.get(`${BASE_URL}/api/v1/tasks`);
         return res.data.tasks;
     }
 );
@@ -23,7 +25,7 @@ export const addTask = createAsyncThunk(
         if (taskName === '') {
             return taskName
         } else {
-            const res = await axios.post('/api/v1/tasks', {
+            const res = await axios.post(`${BASE_URL}/api/v1/tasks`, {
                 task: taskName
             });
             return res.data.task;
@@ -36,7 +38,7 @@ export const getTask = createAsyncThunk(
     'task/getTask',
     async (payload) => {
         const { id } = payload;
-        const res = await axios.get(`/api/v1/tasks/${id}`);
+        const res = await axios.get(`${BASE_URL}/api/v1/tasks/${id}`);
         return res.data.task;
     }
 );
@@ -48,7 +50,7 @@ export const editTask = createAsyncThunk(
         if (task === '') {
             return ''
         }
-        const res = await axios.patch(`/api/v1/tasks/${id}`, {
+        const res = await axios.patch(`${BASE_URL}/api/v1/tasks/${id}`, {
             task,
             completed
         });
@@ -60,7 +62,7 @@ export const deleteTask = createAsyncThunk(
     'task/deleteTask',
     async (payload) => {
         const { id } = payload;
-        const res = await axios.delete(`/api/v1/tasks/${id}`);
+        const res = await axios.delete(`${BASE_URL}/api/v1/tasks/${id}`);
         return res.data.task;
     }
 )
