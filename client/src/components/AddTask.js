@@ -15,7 +15,8 @@ export default function AddTask() {
                     placeholder="e.g. take out the trash" 
                     onChange={e => {
                         dispatch(handleChangeTaskName(e.target.value));
-                    }}    
+                    }}
+                    onKeyPress={e => e.key === 'Enter' && dispatch(addTask())}
                 />
                 <Button 
                     color="primary"
