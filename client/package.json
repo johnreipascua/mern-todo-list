@@ -1,6 +1,5 @@
 {
   "homepage": "http://johnreipascua.github.io/mern-todo-list",
-  "proxy": "https://mern-todo-list.onrender.com/",
   "name": "mern-todo-list",
   "version": "0.1.0",
   "private": true,
@@ -17,6 +16,7 @@
     "react-icons": "^4.6.0",
     "react-redux": "^8.0.5",
     "react-scripts": "5.0.1",
+    "react-spinners": "^0.13.6",
     "reactstrap": "^9.1.5",
     "web-vitals": "^2.1.4"
   },

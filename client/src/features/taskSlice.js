@@ -7,7 +7,8 @@ const initialState = {
     tasks: [],
     taskName: '',
     isOpen: false,
-    taskModal: {}
+    taskModal: {},
+    loading: false
 }
 
 export const getAllTasks = createAsyncThunk(
@@ -85,8 +86,12 @@ const taskSlice = createSlice({
         }
     },
     extraReducers: {
+        [getAllTasks.pending]: (state, action) => {
+            state.loading = true;
+        },
         [getAllTasks.fulfilled]: (state, action) => {
             state.tasks = [...action.payload];
+            state.loading = false;
         },
         [addTask.fulfilled]: (state, action) => {
             if (action.payload === '') {
