@@ -20,7 +20,7 @@ export default function TaskModal() {
                             type="text"
                             value={taskModal.task}
                             onChange={e => dispatch(handleChangeTaskModal(e.target.value))}
-                            onKeyPress={e => e.key === 'Enter' && e.preventDefault}
+                            onKeyPress={e => e.key === 'Enter' && e.preventDefault()}
                         />
                         <Label for="task">Task:</Label>
                     </FormGroup>
@@ -35,7 +35,7 @@ export default function TaskModal() {
             <ModalFooter>
             <Button color="success" outline={true}
                 onClick={(e) => {
-                    e.preventDefault
+                    e.preventDefault();
                     const payload = {
                         id: taskModal._id,
                         task: taskModal.task,
