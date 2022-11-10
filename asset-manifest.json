@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/mern-todo-list/static/css/main.0dcab82b.css",
-    "main.js": "/mern-todo-list/static/js/main.635a828d.js",
+    "main.css": "/mern-todo-list/static/css/main.0400849a.css",
+    "main.js": "/mern-todo-list/static/js/main.c8117d34.js",
     "index.html": "/mern-todo-list/index.html",
-    "main.0dcab82b.css.map": "/mern-todo-list/static/css/main.0dcab82b.css.map",
-    "main.635a828d.js.map": "/mern-todo-list/static/js/main.635a828d.js.map"
+    "main.0400849a.css.map": "/mern-todo-list/static/css/main.0400849a.css.map",
+    "main.c8117d34.js.map": "/mern-todo-list/static/js/main.c8117d34.js.map"
   },
   "entrypoints": [
-    "static/css/main.0dcab82b.css",
-    "static/js/main.635a828d.js"
+    "static/css/main.0400849a.css",
+    "static/js/main.c8117d34.js"
   ]
 }
